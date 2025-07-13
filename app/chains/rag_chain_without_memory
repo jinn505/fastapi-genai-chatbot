@@ -1,0 +1,25 @@
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+from app.retriever.qdrant_wrapper import get_qdrant
+import os
+from app.utils.output_parser import parse_output
+from app.models.llm_groq import model
+
+load_dotenv()
+
+storage = get_qdrant()
+
+def generate_answer(question : str) -> str:
+    docs = storage.similarity_search(question , k=3)
+
+    context = "/n/n".join([doc.page_content for doc in docs])
+
+    prompt = f""" Answer the following question with the following context: 
+    {context}
+     
+    question : {question}
+    Answer : """
+
+    response = model.invoke(prompt)
+
+    return parse_output(response.content) if hasattr(response,"content") else str(response)

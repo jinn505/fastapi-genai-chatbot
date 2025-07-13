@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+*.env
+
+# VSCode settings
+.vscode/
+
+# Logs and caches
+*.log
+*.sqlite3
+*.db
+.cache/
+*.pid
+
+# Testing and coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+*.cover
+coverage.xml
+*.pytest_cache/
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Qdrant data (if you run it locally)
+qdrant_data/

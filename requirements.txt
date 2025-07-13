@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchainhub
+qdrant-client
+sentence-transformers
+python-dotenv
+requests
+langchain-groq
+tf-keras
+pypdf
+sqlalchemy
+pydantic
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
