@@ -37,7 +37,7 @@ A robust, production-ready Conversational AI chatbot built with **LangChain**, *
 | Embeddings         | HuggingFace `all-MiniLM-L6-v2`       |
 | Vector Store       | Qdrant                              |
 | Orchestration      | LangChain                           |
-| Auth (Optional)    | JWT + SQLite                        |
+| Auth               | JWT + SQLite                        |
 | Deployment         | Uvicorn / Docker-ready              |
 
 ---
